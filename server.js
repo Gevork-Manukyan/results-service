@@ -13,7 +13,7 @@ app.use(morgan("tiny")) // Log requests info
 
 app.get("/test", (req, res) => {
     console.log(req.body)
-    res.send("Hello world")
+    res.send(req.body)
 })
 
 app.listen(3001, () => {
