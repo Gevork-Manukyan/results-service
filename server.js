@@ -1,7 +1,9 @@
 const express = require("express")
 const app = express()
+const cors = require("cors")
 
-app.get("/", (req, res) => {
+app.get("/test", (req, res) => {
+    console.log(req.body)
     res.send("Hello world")
 })
 
