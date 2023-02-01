@@ -11,9 +11,15 @@ app.use(morgan("tiny")) // Log requests info
 
 
 
-app.get("/test", (req, res) => {
+app.put("/test", (req, res) => {
     console.log(req.body)
-    res.send(req.body)
+    const data = req.body 
+    res.send(req.body.data)
+})
+
+app.get("/", (req, res) => {
+    
+    res.send(req.body.myKey)
 })
 
 app.listen(3001, () => {
